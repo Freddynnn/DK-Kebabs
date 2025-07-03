@@ -1,0 +1,33 @@
+# Dependency directories (will be reinstalled inside the container)
+node_modules/
+
+# Build output (will be created fresh during the Docker build)
+build/
+dist/
+
+# Local environment files (use Docker ENV variables instead)
+.env
+.env.*
+
+# Version control files
+.git/
+.gitignore
+
+# Editor config files
+.vscode/
+.idea/
+
+# Logs and temporary files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Optional: Tests and coverage (if you don’t want them in the image)
+coverage/
+*.test.js
+*.spec.js
