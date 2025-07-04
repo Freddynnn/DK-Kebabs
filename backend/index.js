@@ -1,14 +1,14 @@
 const express = require('express');
-const app = express();
-const PORT = 4000;
+const cors = require('cors');
+const menuRoutes = require('./routes/menu');
+require('dotenv').config();
 
+const app = express();
+const PORT = process.env.PORT || 4000;
+
+app.use(cors());
 app.use(express.json());
 
-app.get('/menu', (req, res) => {
-    res.json([{ id: 1, name: "Chicken Kebab", price: 12 }]);
-});
+app.use('/menu', menuRoutes);
 
 app.listen(PORT, () => console.log(`Backend running on port ${PORT}`));
-
-
-// JUST BASIC EXAMPLE FILE
